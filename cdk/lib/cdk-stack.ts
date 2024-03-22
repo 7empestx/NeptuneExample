@@ -15,6 +15,7 @@ export class CdkStack extends cdk.Stack {
           cidrMask: 24,
           name: "PublicSubnet",
           subnetType: ec2.SubnetType.PUBLIC,
+          mapPublicIpOnLaunch: true,
         },
         {
           cidrMask: 24,
