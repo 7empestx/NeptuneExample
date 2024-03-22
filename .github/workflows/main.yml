@@ -35,4 +35,5 @@ jobs:
 
       - name: Run Recursive Build Script
         run: |
+          chdmod +x recursiveBuild.sh
           ./recursiveBuild.sh
