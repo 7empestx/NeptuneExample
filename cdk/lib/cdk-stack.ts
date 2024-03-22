@@ -8,7 +8,7 @@ export class CdkStack extends cdk.Stack {
     super(scope, id, props);
 
     // Create a new VPC
-    const vpc = new ec2.Vpc(this, "MyVPC", {
+    const vpc = new ec2.Vpc(this, "NeptuneVPC", {
       maxAzs: 2, // Default is all AZs in the region
       subnetConfiguration: [
         {
