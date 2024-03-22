@@ -49,7 +49,7 @@ export class CdkStack extends cdk.Stack {
         generation: ec2.AmazonLinuxGeneration.AMAZON_LINUX_2,
       }),
       securityGroup: bastionSecurityGroup,
-      keyName: "your-key-pair-name", // Ensure you have this key pair created in your AWS account
+      keyName: "Mac",
     });
 
     console.log(`Bastion Host Public IP: ${bastionHost.instancePublicIp}`);
