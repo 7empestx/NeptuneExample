@@ -8,7 +8,7 @@ export class CdkStack extends cdk.Stack {
     super(scope, id, props);
 
     // Create a new VPC
-    const vpc = new ec2.Vpc(this, "NeptuneVPC", {
+    const vpc = new ec2.Vpc(this, "MyVPC", {
       maxAzs: 2, // Default is all AZs in the region
       subnetConfiguration: [
         {
@@ -51,6 +51,9 @@ export class CdkStack extends cdk.Stack {
       }),
       securityGroup: bastionSecurityGroup,
       keyName: "Mac",
+      vpcSubnets: {
+        subnetType: ec2.SubnetType.PUBLIC,
+      },
     });
 
     console.log(`Bastion Host Public IP: ${bastionHost.instancePublicIp}`);
